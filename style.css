@@ -1,0 +1,41 @@
+.dots, .card, body {
+  font-size: 80px;
+  line-height: 24px;
+}
+
+body {
+  background-color: black;
+  color: red;
+  color: black;
+  font-size: 20px;
+  transform: 360deg;
+}
+
+.card .item {
+  background-color: aqua;
+}
+.card .item2 {
+  background-color: bisque;
+}
+
+.dots {
+  width: 80px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border: 1px solid green;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+.dots__item {
+  width: 30px;
+  height: 30px;
+  background-color: antiquewhite;
+  border-radius: 50px;
+}
+.dots__item--active {
+  background-color: blueviolet;
+}
+.dots__item.active {
+  background-color: chocolate;
+}

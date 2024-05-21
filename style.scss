@@ -1,0 +1,53 @@
+$colorRed: red;
+$generalcolor: black;
+%fontStyle{
+    font-size: 80px;
+    line-height: 24px;
+}
+@mixin transform($prop){
+    -webkit-transform: $prop;
+    -ms-transform: $prop;
+    transform: $prop;
+    // для поддержки в других браузерах
+}
+body{
+    background-color: black;
+    color: $colorRed;
+    color: $generalcolor;
+    font-size: 10px + 10px;
+    @extend %fontStyle;
+    @include transform(360deg)
+
+}
+.card{
+    @extend %fontStyle;
+    .item{
+        background-color: aqua;
+    }
+    .item2{
+        background-color: bisque;
+    }
+}
+
+.dots{
+    @extend %fontStyle;
+    width: 80px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border: 1px solid green;
+    box-sizing: border-box;
+    border-radius: 20px;
+    &__item{
+        width: 30px;
+        height: 30px;
+        background-color: antiquewhite;
+        border-radius: 50px;
+        &--active{
+            background-color: blueviolet;
+        }
+        &.active{
+            background-color: chocolate;
+        }
+    }
+}
